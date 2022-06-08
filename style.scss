@@ -1,0 +1,104 @@
+//importing fonts
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;500;700&family=Open+Sans:wght@400;800&family=Poppins:wght@100;300;600&display=swap");
+
+//removing preset padding and margins
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//creating global colour varaibles
+:root {
+  --back-color: #121213;
+  --key-color: #818384;
+  --absent-color: #3a3a3c;
+  --present-color: #b59f3b;
+  --correct-color: #6aaa64;
+}
+
+//style for the body
+body {
+  background-color: var(--back-color);
+  header {
+    color: #ffff;
+    font-family: "Josefin", sans-serif;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.game {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  #board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.5em;
+    padding: 1em;
+    box-sizing: border-box;
+    .square {
+      border: 2px solid var(--key-color);
+      min-width: 50px;
+      min-height: 50px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: aliceblue;
+      font-family: "Poppins", sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.game-keyboard {
+  height: 200px;
+  .key-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 0.2em;
+    touch-action: manipulation;
+
+    .big-button {
+      width: 5em;
+    }
+
+    button {
+      background: var(--key-color);
+      height: 3em;
+      width: 2em;
+      border: none;
+      margin: 0.2em;
+      color: white;
+      border-radius: 5%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-variant: small-caps;
+      font-weight: bold;
+      user-select: none;
+    }
+  }
+}

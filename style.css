@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;500;700&family=Open+Sans:wght@400;800&family=Poppins:wght@100;300;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --back-color: #121213;
+  --key-color: #818384;
+  --absent-color: #3a3a3c;
+  --present-color: #b59f3b;
+  --correct-color: #6aaa64;
+}
+
+body {
+  background-color: var(--back-color);
+}
+
+body header {
+  color: #ffff;
+  font-family: "Josefin", sans-serif;
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.game {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  overflow: hidden;
+}
+
+.board-container #board {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0.5em;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.board-container #board .square {
+  border: 2px solid var(--key-color);
+  min-width: 50px;
+  min-height: 50px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: aliceblue;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-keyboard {
+  height: 200px;
+}
+
+.game-keyboard .key-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto 0.2em;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.game-keyboard .key-row .big-button {
+  width: 5em;
+}
+
+.game-keyboard .key-row button {
+  background: var(--key-color);
+  height: 3em;
+  width: 2em;
+  border: none;
+  margin: 0.2em;
+  color: white;
+  border-radius: 5%;
+  font-size: 1.3rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
